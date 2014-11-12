@@ -1,6 +1,5 @@
 Template.postSubmit.events({
   'submit form': function(element) {
-    console.log(element);
     element.preventDefault();
 
     var post = {
