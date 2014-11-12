@@ -8,6 +8,6 @@ Template.postSubmit.events({
     };
 
     post._id = Posts.insert(post);
-    Router.go('postPage', post);
+    Router.go('postsList', post);
   }
 });
