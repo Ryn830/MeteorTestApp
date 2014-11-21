@@ -46,6 +46,7 @@ minifiers@1.1.2
 minimongo@1.0.5
 mizzao:bootstrap-3@3.3.0
 mobile-status-bar@1.0.1
+mongo-livedata@1.0.6
 mongo@1.0.8
 npm-bcrypt@0.7.7
 observe-sequence@1.0.3
@@ -56,6 +57,7 @@ reactive-var@1.0.3
 reload@1.1.1
 retry@1.0.1
 routepolicy@1.0.2
+ryn830:errors@1.0.0
 sacha:spin@2.0.4
 service-configuration@1.0.2
 session@1.0.4
