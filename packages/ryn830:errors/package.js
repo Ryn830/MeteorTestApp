@@ -15,7 +15,7 @@ Package.onUse(function(api) {
 });
 
 Package.onTest(function(api) {
-  api.use('tinytest');
-  api.use('ryn830:errors');
-  api.addFiles('ryn830:errors-tests.js');
+  api.use('ryn830:errors', 'client');
+  api.use(['tinytest', 'test-helpers'], 'client');
+  api.addFiles('errors_tests.js', 'client');
 });
