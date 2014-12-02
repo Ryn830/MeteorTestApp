@@ -13,6 +13,9 @@ Template.postItem.helpers({
       return 'btn-primary upvotable';
     }
     return 'disabled';
+  },
+  postUrl: function(){
+    return this.shortUrl ? this.shortUrl : this.url;
   }
 });
 
