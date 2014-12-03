@@ -48,6 +48,21 @@ Bitly.getClicks = function(link){
 
 Meteor.methods({
   'getBitlyClicks': function(link){
+    check(link, String);
     return Bitly.getClicks(link);
   }
 });
+
+var callInterval = 10000;
+Meteor.setInterval(function(){
+  var shortUrlPosts = Posts.find({shortUrl: { $exists: true }});
+  var postsNumber = shortUrlPosts.count();
+  var count = 0;
+  shortUrlPosts.forEach(function(posts){
+    var callTimeout = Math.round(callInterval / postsNumber * count);
+    Meteor.setTimeout(function(){
+      Posts.update(post._id, {$set: {clicks: Bitly.getClicks(post.shortUrl)}});
+    }, callTimeout);
+    count++;
+  });
+}, callInterval);
